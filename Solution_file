@@ -1,0 +1,15 @@
+--Q1
+SELECT
+COUNT(order_id)
+FROM pizza_runner.customer_orders;
+
+--Q2
+SELECT
+COUNT(DISTINCT (order_id))
+FROM pizza_runner.customer_orders;
+
+--Q3
+SELECT runner_id, COUNT(runner_id)
+FROM pizza_runner.runner_orders
+WHERE duration IS NOT null
+GROUP BY runner_id
